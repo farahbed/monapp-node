@@ -1,5 +1,4 @@
-name: CI/CD Docker + Kubernetes
-
+name: CI Docker
 on:
   push:
     branches: [ "main" ]
@@ -28,6 +27,4 @@ jobs:
       - name: Push Docker image
         run: docker push farahbed/monapp-node:latest
 
-        # Update Kubernetes deployment
-      - name: Update Kubernetes deployment
-        run: kubectl rollout restart deployment monapp
+      
